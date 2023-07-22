@@ -1,0 +1,42 @@
+                        一些笔记
+
+&实验二测试音阶：
+    乖宝宝：opqqpo（前6个音阶）
+    两只老虎：opqoopqo（前八个音阶）
+
+&实验三测试实例：
+    实例一：(1,4) (3,3) (4,1) (5,4) 画布大小：6×6
+    实例二多重可斜线：(1,1) (5,3) (3,5) (7,7) 画布大小8×8
+
+&几个颜色：蓝，#0000FF  红，#FF0000  绿，#77FF00
+
+&随机数生成：np.random.randint(<low>,<high>)    # 从low到high-1生成一个随机整数
+
+&扫雷游戏：
+    1.layout中删除（全部元素）：
+        for i in range(self.gridLayout.count()):
+            self.gridLayout.itemAt(i).widget().deleteLater()
+    2.核心：gridLayout
+    3.QComBox状态改变信号：
+        cbox.currentIndexChanged.connect(<def>)   
+    4.问题：
+        1.按钮的点中状态？
+        2.按钮设置图标？
+        3.按钮右键？
+        4.扫雷核心逻辑（难）
+
+&代码片段：QPushButton更改突起样式：
+    if self.ui.btn.isFlat():
+        self.ui.btn.setFlat(False)
+    else:
+        self.ui.btn.setFlat(True)
+&代码片段：放入按钮（gridLayout中）
+    for i in range(self.line):
+        for j in range(self.line):
+            button = QPushButton("按钮",self.ui)
+            button.setSizePolicy(self.policy)
+            self.ui.btn_contain.addWidget(button,i,j)
+&PySide2 connect参数传递：
+    方法一Lambda： btn.clicked.connect(lambda: self.handle(1))
+    方法二partial：btn.clicked.connect(functools.partial(self.handle,1))    # 需要导入functools模块
+

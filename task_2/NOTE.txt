@@ -1,0 +1,30 @@
+&相关知识：
+    1.ASCII整数与字符的转换：
+        ord('a') = 97
+        chr(97) = 'a'
+
+&TO DO LIST:
+    1.不管音调，写一个核心类
+    2.界面布局，输入字串发出声音
+    3.调整、设置音调，播放歌曲
+
+&问题：
+    程序反应有点慢。。。
+
+&风不叫摇篮曲：
+    do re mi
+    mi re do 
+    do re mi do mi
+    do re mi
+    mi re do 
+    do re mi mi do
+    自己估计，设定时间（多试几次）
+暂定前11个音节：opqqpoopqoq opqqpoopqqo
+
+&两只老虎音调：h i j k l m n
+    do re mi do do re mi do
+    mi fa so mi fa so
+    so la so fa mi do
+    so la so fa mi do
+    re so do re so do
+暂定前八个音节：opqoopqo
